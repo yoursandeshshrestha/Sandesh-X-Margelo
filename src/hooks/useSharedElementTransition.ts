@@ -134,11 +134,11 @@ export const useSharedElementTransition = () => {
    * Animated style for shared song info that morphs between states
    */
   const sharedSongInfoStyle = useAnimatedStyle(() => {
-    // Mini: to right, Full: keep on screen with more padding
+    // Mini: to right, Full: align to left edge with padding
     const leftPosition = interpolate(
       progress.value,
       [0, 1],
-      [PLAYER_POSITIONS.SONG_INFO_MINI_LEFT, PLAYER_POSITIONS.SONG_INFO_FULL_LEFT]
+      [PLAYER_POSITIONS.SONG_INFO_MINI_LEFT, 54]
     );
 
     // Mini: same bottom as album, Full: move much higher up (below album centered)
@@ -154,7 +154,7 @@ export const useSharedElementTransition = () => {
     const width = interpolate(
       progress.value,
       [0, 1],
-      [SCREEN_WIDTH - PLAYER_POSITIONS.SONG_INFO_MINI_WIDTH_OFFSET, SCREEN_WIDTH]
+      [SCREEN_WIDTH - PLAYER_POSITIONS.SONG_INFO_MINI_WIDTH_OFFSET, SCREEN_WIDTH - 180]
     );
 
     // Scale up in full screen to make text bigger

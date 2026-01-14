@@ -16,16 +16,20 @@ export const SongInfo = memo<SongInfoProps>(
     const isCompact = layout === 'compact';
 
     return (
-      <View className={`${isCompact ? 'flex-1' : 'w-full'} ${className}`}>
+      <View className={`${isCompact ? 'flex-1 min-w-0' : 'w-full'} ${className}`}>
         <Text
-          className={`font-semibold text-gray-900 ${isCompact ? 'text-base' : 'text-center text-2xl'}`}
+          className={`font-semibold text-gray-900 ${isCompact ? 'text-base' : 'text-2xl'}`}
           numberOfLines={isCompact ? 1 : 2}
+          ellipsizeMode="tail"
+          style={!isCompact ? { maxWidth: '100%' } : undefined}
         >
           {title}
         </Text>
         <Text
-          className={`text-gray-500 ${isCompact ? 'text-sm' : 'text-center text-lg'} ${isCompact ? '' : 'mt-2'}`}
+          className={`text-gray-500 ${isCompact ? 'text-sm' : 'text-lg'} ${isCompact ? '' : 'mt-2'}`}
           numberOfLines={1}
+          ellipsizeMode="tail"
+          style={!isCompact ? { maxWidth: '100%' } : undefined}
         >
           {artist}
         </Text>

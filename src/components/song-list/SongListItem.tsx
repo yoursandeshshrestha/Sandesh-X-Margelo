@@ -23,7 +23,7 @@ const SongListItemComponent = ({ song, onPress }: SongListItemProps) => {
       activeOpacity={0.6}
     >
       <AlbumArt coverUrl={song.coverUrl} size={48} />
-      <SongInfo title={song.title} artist={song.artist} layout="compact" />
+      <SongInfo title={song.title} artist={song.artist} layout="compact" className="flex-shrink" />
     </TouchableOpacity>
   );
 };
