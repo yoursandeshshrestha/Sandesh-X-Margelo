@@ -51,9 +51,7 @@ const FullScreenPlayerComponent = ({
         {/* Song Info - hidden when using shared element */}
         {!hideSharedElements && (
           <View className="px-4" style={{ marginBottom: songInfoBottomSpacing, width: '100%' }}>
-            <View style={{ width: '100%', borderWidth: 2, borderColor: '#ff0000', backgroundColor: '#ffcccc', padding: 10 }}>
-              <SongInfo title={song.title} artist={song.artist} layout="expanded" />
-            </View>
+            <SongInfo title={song.title} artist={song.artist} layout="expanded" />
           </View>
         )}
         {hideSharedElements && <View style={{ height: 60, marginBottom: songInfoBottomSpacing }} />}
