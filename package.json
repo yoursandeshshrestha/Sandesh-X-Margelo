@@ -2,8 +2,9 @@
   "name": "margelo",
   "version": "1.0.0",
   "scripts": {
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "android:withHeader": "npx expo run:android --variant withHeaderDebug",
+    "ios": "expo run:ios",
     "start": "expo start",
     "prebuild": "expo prebuild",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
